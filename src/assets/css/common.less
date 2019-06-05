@@ -1,0 +1,48 @@
+@import "config";
+
+body {
+  background: @body-background;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: @fontbodyfamily;
+  font-size: @fontbodysize;
+}
+.clear{
+  clear: both;
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: @scrollBarconfig;
+  height: @scrollBarconfig;
+  background-color: @scorllincolor;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: @scrollBarconfig;
+  background-color: @scorllincolor;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: @scrollBarconfig;
+  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: @scorllincolor;
+}
+/*滑块效果*/
+::-webkit-scrollbar-thumb:hover {
+  //border-radius: 5px;
+  //-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  background: @scorlloutcolor;
+}
