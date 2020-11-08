@@ -1,5 +1,6 @@
 
 <template>
+  <!-- 不使用过渡动画 -->
   <!-- <router-view></router-view> -->
   <div id="app">
     <transition name="fade" mode="out-in">
